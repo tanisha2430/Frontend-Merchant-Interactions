@@ -1,35 +1,33 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
 
 
 
 const Signup = () => {
   const navigate = useNavigate();
-  const {loading,signup}=useAuth()
+  // const {loading,signup}=useAuth()
   const [credentials, setCredentials] = useState({
     username: "",
     email: "",
-    // profession:"",
     password: "",
     cpassword: "",
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault()
     console.log("credentials",credentials)
     if(credentials.password !== credentials.cpassword){
       return alert("Password did not matched")
     }
-    await signup(credentials)
+    // await signup(credentials)
   }
   const onHandleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value.trim() });
   };
 
-  if(loading){
-    return <div>Please wait Loading...</div>
-  }
+  // if(loading){
+  //   return <div>Please wait Loading...</div>
+  // }
 
   return (
     <div className="flex flex-col md:flex-row bg-orange-100 items-center justify-center min-h-screen">

@@ -15,11 +15,14 @@ const options = {
         { value: 'Retail', label: 'Retail' },
         { value: 'Wholesale', label: 'Wholesale' },
         { value: 'Service', label: 'Service' },
+        { value: 'Other', label: 'Other' },
     ],
     interactionTypes: [
-        { value: 'Call', label: 'Call' },
-        { value: 'Meeting', label: 'Meeting' },
+        { value: 'Phone', label: 'Phone' },
+        { value: 'Chat', label: 'Chat' },
         { value: 'Email', label: 'Email' },
+        { value: 'Other', label: 'Other' },
+
     ],
     statuses: [
         { value: 'Open', label: 'Open' },

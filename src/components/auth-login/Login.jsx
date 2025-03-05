@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
   const navigate = useNavigate();
-  const {login}=useAuth()
+  // const {login}=useAuth()
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
-    await login(credentials)
+    // await login(credentials)
   };
 
   const onHandleChange = (e) => {
